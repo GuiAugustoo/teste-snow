@@ -1,6 +1,12 @@
-deploy:
-    name: Deploy
+name: Deploy
+
+on: push
+
+jobs:
+   build:
     runs-on: ubuntu-latest
+    
+    
     steps:
       - name: ServiceNow Change
         uses: ServiceNow/servicenow-devops-change@v1.34.2
